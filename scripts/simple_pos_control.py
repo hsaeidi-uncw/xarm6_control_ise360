@@ -35,7 +35,7 @@ if __name__ == '__main__':
 	pos_cmd = JointTrajectory()
 	pos_cmd_point = JointTrajectoryPoint()
 	# just a quick solution to complete the message template
-	pos_cmd.joint_names.append('joint2')
+	pos_cmd.joint_names.append('joint1')
 	pos_cmd.joint_names.append('joint2')
 	pos_cmd.joint_names.append('joint3')
 	pos_cmd.joint_names.append('joint4')
