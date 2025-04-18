@@ -15,6 +15,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
   std_msgs
+  xarm_msgs
   tf
   trajectory_msgs
 )
@@ -221,3 +222,9 @@ target_link_libraries(task_space_traj ${catkin_LIBRARIES} ReflexxesTypeII)
 
 add_executable(task_space_traj_gripper src/task_space_traj_gripper.cpp)
 target_link_libraries(task_space_traj_gripper ${catkin_LIBRARIES} ReflexxesTypeII)
+
+
+add_executable(gripper_server_emulator src/gripper_server_emulator.cpp)
+target_link_libraries(gripper_server_emulator ${catkin_LIBRARIES})
+
+
