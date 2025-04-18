@@ -228,3 +228,8 @@ add_executable(gripper_server_emulator src/gripper_server_emulator.cpp)
 target_link_libraries(gripper_server_emulator ${catkin_LIBRARIES})
 
 
+
+add_executable(simple_planner_with_gripper src/simple_planner_with_gripper.cpp )
+target_link_libraries(simple_planner_with_gripper ${catkin_LIBRARIES})
+
+

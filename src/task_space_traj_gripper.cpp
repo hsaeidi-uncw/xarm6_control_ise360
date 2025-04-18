@@ -360,8 +360,10 @@ int main(int argc, char * argv[])
 			traj_status_pub.publish(traj_expired);
 		
 	    }else{
-	    	traj_expired.data = true;
-			traj_status_pub.publish(traj_expired);
+	    	if (!traj_expired.data){
+	    		traj_expired.data = true;
+				traj_status_pub.publish(traj_expired);
+			}
 	    	if (is_new_plan(plan, prev_plan)){
 		    	std::cout << "\n\n\n\n\n\n\n Initialized the plan again \n\n\n\n\n\n\n\n" << std::endl;
 		    	ResultValue = 0 ;
