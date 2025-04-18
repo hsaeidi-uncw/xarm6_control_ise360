@@ -127,9 +127,12 @@ int main(int argc, char * argv[]){
 			   		}
 		   		}
 		   		if(state == 'c'){
-			   		srv.request.pulse_pos = 200;// will be updated when the real robot is used
+			   		srv.request.pulse_pos = 220;// use 850 for openning the gripper
 			   		if (client.call(srv)){
     					std::cout << srv.response.message << std::endl; 
+    					
+    					// add a short pause to complete gripper action before switching the state
+						ros::Duration(1.5).sleep();
 						// switch to the next state
     					state = 'r';
     					std::cout << "Switching to state: RETRACT! " << std::endl;
